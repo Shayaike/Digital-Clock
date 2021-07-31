@@ -1,12 +1,14 @@
 window.onload = function Clock() {
-    var date = new Date();
+    var date = new Date()
     var hours = date.getHours()
     var year = date.getFullYear()
     var mon = date.getMonth()
     var day = date.getDate()
+    var today = date.getDay()
     var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    var weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-    var fullDate = day + " " + month[mon] + " " + year
+    var fullDate = day + " " + month[mon] + " " + year + " " + weekday[today]
 
     if (hours > 12) {
         hours = hours - 12
